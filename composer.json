@@ -16,7 +16,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/wartron/yii2-user.git"
+            "url": "https://github.com/wartron/yii2-account.git"
         }
     ],
     "require": {
@@ -24,7 +24,7 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "dektrium/yii2-user": "@dev"
+        "wartron/yii2-account": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

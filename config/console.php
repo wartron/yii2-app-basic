@@ -12,7 +12,7 @@ return [
     'controllerNamespace' => 'app\commands',
     'modules' => [
         'gii' => 'yii\gii\Module',
-        'user' => [
+        'account' => [
             'class' => 'wartron\yii2account\Module',
         ],
     ],

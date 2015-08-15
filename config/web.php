@@ -36,7 +36,7 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'modules' => [
-        'user' => [
+        'account' => [
             'class' => 'wartron\yii2account\Module',
             'defaultRoute'  => 'profile',
             'admins'        => ['admin','adminxx2'],

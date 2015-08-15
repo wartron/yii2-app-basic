@@ -43,11 +43,11 @@ AppAsset::register($this);
     if ( Yii::$app->user->isGuest ) {
         $navItems[] = [
             'label' =>  'Signup',
-            'url'   =>  ['/user/registration/register']
+            'url'   =>  ['/account/registration/register']
         ];
         $navItems[] = [
             'label' =>  'Login',
-            'url'   =>  ['/user/security/login']
+            'url'   =>  ['/account/security/login']
         ];
     } else {
         $navItems[] = [
@@ -56,21 +56,35 @@ AppAsset::register($this);
             'items' =>  [
                 [
                     'label' =>  'Logged in as <b>'.Yii::$app->user->identity->username.'</b>',
-                    'url'   =>  ['/user/settings'],
+                    'url'   =>  ['/account'],
                 ],
                 '<li role="presentation" class="divider"></li>',
                 [
                     'label' =>  'Settings',
-                    'url'   =>  ['/user/settings'],
+                    'url'   =>  ['/account/settings'],
                 ],
                 '<li role="presentation" class="divider"></li>',
                 [
                     'label' =>  'Logout',
-                    'url'   =>  ['/user/security/logout'],
+                    'url'   =>  ['/account/security/logout'],
                     'linkOptions'   => ['data-method' => 'post']
                 ]
             ]
         ];
+
+        if( Yii::$app->user->identity->isAdmin ){
+            $navItems[] = [
+                'label' =>  '<i class="glyphicon glyphicon-cog"></i>' ,
+                'url'   =>  ['#'],
+                'items' =>  [
+                    [
+                        'label' =>  'Account Admin',
+                        'url'   =>  ['/account/admin'],
+                    ],
+                ]
+            ];
+        }
+
     }
 
     echo Nav::widget([
