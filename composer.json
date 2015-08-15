@@ -13,11 +13,18 @@
         "source": "https://github.com/yiisoft/yii2"
     },
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/wartron/yii2-user.git"
+        }
+    ],
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+        "dektrium/yii2-user": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

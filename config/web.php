@@ -9,14 +9,10 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'zxczxczxczxczxc',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-        ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -39,19 +35,38 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'defaultRoute'  => 'profile',
+            'admins'        => ['admin','adminxx2'],
+            'enableFlashMessages'   => false,
+            'enableConfirmation'    =>  false,
+        ],
+    ],
     'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
+    $allowedIPs = [
+        '127.0.0.1',
+        '::1',
+        '192.168.*',
+        '172.17.*'
+    ];
+
+
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
+        'allowedIPs' => $allowedIPs
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'allowedIPs' => $allowedIPs
     ];
 }
 
