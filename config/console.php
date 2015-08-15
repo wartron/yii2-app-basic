@@ -13,7 +13,7 @@ return [
     'modules' => [
         'gii' => 'yii\gii\Module',
         'user' => [
-            'class' => 'dektrium\user\Module',
+            'class' => 'wartron\yii2account\Module',
         ],
     ],
     'components' => [

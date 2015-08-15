@@ -37,7 +37,7 @@ $config = [
     ],
     'modules' => [
         'user' => [
-            'class' => 'dektrium\user\Module',
+            'class' => 'wartron\yii2account\Module',
             'defaultRoute'  => 'profile',
             'admins'        => ['admin','adminxx2'],
             'enableFlashMessages'   => false,
