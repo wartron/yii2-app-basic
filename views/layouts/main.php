@@ -42,27 +42,40 @@ AppAsset::register($this);
 
     if ( Yii::$app->user->isGuest ) {
         $navItems[] = [
+            'label' =>  'Signup',
+            'url'   =>  ['/user/registration/register']
+        ];
+        $navItems[] = [
             'label' =>  'Login',
             'url'   =>  ['/user/security/login']
         ];
     } else {
         $navItems[] = [
-            'label' =>  Yii::$app->user->identity->username,
-            'url'   =>  ['/user'],
-        ];
-        $navItems[] = [
-            'label' =>  'settings',
-            'url'   =>  ['/user/settings'],
-        ];
-        $navItems[] = [
-            'label' =>  'Logout',
-            'url'   =>  ['/user/security/logout'],
-            'linkOptions'   => ['data-method' => 'post']
+            'label' =>  '<i class="glyphicon glyphicon-user"></i> ' . Yii::$app->user->identity->username,
+            'url'   =>  ['#'],
+            'items' =>  [
+                [
+                    'label' =>  'Logged in as <b>'.Yii::$app->user->identity->username.'</b>',
+                    'url'   =>  ['/user/settings'],
+                ],
+                '<li role="presentation" class="divider"></li>',
+                [
+                    'label' =>  'Settings',
+                    'url'   =>  ['/user/settings'],
+                ],
+                '<li role="presentation" class="divider"></li>',
+                [
+                    'label' =>  'Logout',
+                    'url'   =>  ['/user/security/logout'],
+                    'linkOptions'   => ['data-method' => 'post']
+                ]
+            ]
         ];
     }
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
+        'encodeLabels' => false,
         'items' => $navItems,
     ]);
     NavBar::end();
