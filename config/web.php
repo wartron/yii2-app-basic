@@ -7,9 +7,24 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'authClientCollection' => [
+            'class'   => \yii\authclient\Collection::className(),
+            'clients' => [
+                // 'github' => [
+                //     'class'         =>  'wartron\yii2account\clients\GitHub',
+                //     'clientId'      =>  '',
+                //     'clientSecret'  =>  '',
+                // ],
+                // 'bitbucket' => [
+                //     'class'             =>  'wartron\yii2account\clients\BitBucket',
+                //     'consumerKey'       =>  '',
+                //     'consumerSecret'    =>  '',
+                // ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'zxczxczxczxczxc',
+            'cookieValidationKey' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -37,10 +52,10 @@ $config = [
     ],
     'modules' => [
         'account' => [
-            'class' => 'wartron\yii2account\Module',
-            'defaultRoute'  => 'profile',
-            'admins'        => ['admin','adminxx2'],
-            'enableFlashMessages'   => false,
+            'class'                 =>  'wartron\yii2account\Module',
+            'defaultRoute'          =>  'profile',
+            'admins'                =>  ['admin'],
+            'enableFlashMessages'   =>  false,
             'enableConfirmation'    =>  false,
         ],
     ],
