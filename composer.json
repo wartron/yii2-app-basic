@@ -17,6 +17,14 @@
         {
             "type": "vcs",
             "url": "https://github.com/wartron/yii2-account.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/wartron/yii2-account-rbac-uuid.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/wartron/yii2-uuid.git"
         }
     ],
     "require": {
@@ -24,7 +32,8 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "wartron/yii2-account": "@dev"
+        "wartron/yii2-account": "dev-uuid",
+        "wartron/yii2-account-rbac-uuid": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -15,8 +15,15 @@ return [
         'account' => [
             'class' => 'wartron\yii2account\Module',
         ],
+        'rbac' => [
+            'class' => 'wartron\yii2account\rbac\Module',
+            'enableFlashMessages'   =>  false
+        ],
     ],
     'components' => [
+        'authManager'  => [
+            'class' => 'yii\rbac\DbManager',
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
