@@ -64,6 +64,7 @@ $config = [
             'admins'        => ['admin','adminxx2'],
             'enableFlashMessages'   => false,
             'enableConfirmation'    =>  false,
+            'useRbacPermissions'    =>  true,
         ],
         'rbac' => [
             'class' => 'wartron\yii2account\rbac\Module',

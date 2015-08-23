@@ -73,6 +73,7 @@ AppAsset::register($this);
         ];
 
         if( Yii::$app->user->identity->isAdmin ){
+        //if( \Yii::$app->user->can('backend-accounts') ){
             $navItems[] = [
                 'label' =>  '<i class="glyphicon glyphicon-cog"></i>' ,
                 'url'   =>  ['#'],
