@@ -17,15 +17,15 @@ $config = [
         'authClientCollection' => [
             'class'   => \yii\authclient\Collection::className(),
             'clients' => [
-                'github' => [
-                    'class'        => 'wartron\yii2account\clients\GitHub',
-                    'clientId'     => '29df592e3c69eb149b45',
-                    'clientSecret' => '55362a84cb87a1d87ce489d2164ffaab2501a8db',
-                ],
+                // 'github' => [
+                //     'class'          =>  'wartron\yii2account\clients\GitHub',
+                //     'clientId'       =>  '',
+                //     'clientSecret'   =>  '',
+                // ],
                 // 'bitbucket' => [
-                //     'class'        => 'app\bitbucket\BitBucket',
-                //     'consumerKey'     => 'WmG9Gm8Lf4preVAnTE',
-                //     'consumerSecret' => 'kgES9VV3jZtkWnrhFdDU3DwYqT9qG26B',
+                //     'class'          =>  'app\bitbucket\BitBucket',
+                //     'consumerKey'    =>  '',
+                //     'consumerSecret' =>  '',
                 // ],
             ],
         ],
