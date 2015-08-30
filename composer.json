@@ -24,11 +24,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/wartron/yii2-uuid.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/wartron/yii2-widgets-urlactive.git"
+            "url": "https://github.com/wartron/yii2-account-billing.git"
         }
     ],
     "require": {
@@ -36,7 +32,10 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
+        "wartron/yii2-uuid": "*",
+        "wartron/yii2-widgets-urlactive": "*",
         "wartron/yii2-account": "dev-master",
+        "wartron/yii2-account-billing": "dev-master",
         "wartron/yii2-account-rbac-uuid": "dev-master"
     },
     "require-dev": {

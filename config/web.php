@@ -7,6 +7,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'formatter' => [
+            'class' => '\wartron\yii2uuid\components\Formatter'
+        ],
         'authManager'  => [
             'class' => 'yii\rbac\DbManager',
         ],
@@ -69,6 +72,9 @@ $config = [
         'rbac' => [
             'class' => 'wartron\yii2account\rbac\Module',
             'enableFlashMessages'   =>  false
+        ],
+        'billing' => [
+            'class' => 'wartron\yii2account\billing\Module',
         ],
     ],
     'params' => $params,

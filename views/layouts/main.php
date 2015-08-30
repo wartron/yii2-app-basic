@@ -79,8 +79,22 @@ AppAsset::register($this);
                 'url'   =>  ['#'],
                 'items' =>  [
                     [
-                        'label' =>  'Account Admin',
+                        'label' =>  '<i class="glyphicon glyphicon-user"></i> Account Admin',
                         'url'   =>  ['/account/admin'],
+                    ],
+
+                    [
+                        'label' =>  '<i class="glyphicon glyphicon-usd"></i> Billing Admin',
+                        'url'   =>  ['/billing/admin'],
+                    ],
+
+                    [
+                        'label' =>  '<i class="glyphicon glyphicon-usd"></i> Billables',
+                        'url'   =>  ['/billing/admin-billable'],
+                    ],
+                    [
+                        'label' =>  '<i class="glyphicon glyphicon-usd"></i> Payments',
+                        'url'   =>  ['/billing/admin-payment'],
                     ],
                 ]
             ];
